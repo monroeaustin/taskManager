@@ -1,6 +1,24 @@
 {
+  "name": "dog-party",
+  "version": "1.0.0",
+  "description": "Dog Party starter kit using webpack and SCSS/SASS enabled.",
+  "main": "index.js",
+  "homepage": "http://monroeaustin.github.io/taskManager",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monroeaustin/taskManager.git"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Turing School of Software and Design",
+  "license": "MIT",
   "devDependencies": {
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "style-loader": "^4.0.0",
