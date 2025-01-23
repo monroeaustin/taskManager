@@ -1,0 +1,231 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: #3498db;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Main Content Styling */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  background-color: #2980b9;
+  /* transform: scale(1.05); */
+}
+
+/* Sidebar List */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+li{
+  text-align: center;
+  padding: 20px;
+
+}
+
+.sidebar ul li button {
+  width: 100%;
+  padding: 12px;
+  background-color: #34495e;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar ul li button:hover {
+  background-color: #1abc9c;
+}
+
+/* Todo List Styling */
+.todo-list {
+  flex: 1;
+  margin-left: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#todo-items {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 15px;
+}
+#todo-items li {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 0.25fr 0.25fr;
+  gap: 20px;
+}
+
+/* Header Row */
+#todo-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 0.25fr 0.25fr;
+  align-items: center;
+  gap: 10px;
+  background-color: #34495e;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
+/* Todo Item Rows */
+.todo-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 0.25fr 0.25fr;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.todo-item:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.todo-item span,
+.todo-item p {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Action Buttons */
+.todo-item .actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.todo-item .actions img {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+/* Project Name Styling */
+.projectname {
+  color: white;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .headingcntr,
+  .todo-item {
+      grid-template-columns: 1fr 1fr; /* Stack items for smaller screens */
+  }
+
+  .todo-item .actions {
+      justify-content: flex-end;
+  }
+}
+img{
+  
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  
+}
+img:hover{
+    transform: scale(1.2); /* Makes the SVG grow */
+    background-color: white;
+  
+  
+}
+li:hover{
+  background-color: #1abc9c;
+  border-radius: 4px;
+  /* transform: scale(1.05); */
+  cursor: pointer;  
+}
+.activeproj{
+  background-color: #14816b;
+  /* transform: scale(1.05); */
+  padding: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.active{
+  background-color: #1abc9c;
+  border-radius: 4px;
+  /* transform: scale(1.05); */
+  cursor: pointer;  
+}
+
